@@ -54,6 +54,12 @@
             <artifactId>jboss-marshalling-serial</artifactId>
             <version>${jboss-marshalling-serial.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.jaguarliu</groupId>
+            <artifactId>jaguarliu-rpc-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 
