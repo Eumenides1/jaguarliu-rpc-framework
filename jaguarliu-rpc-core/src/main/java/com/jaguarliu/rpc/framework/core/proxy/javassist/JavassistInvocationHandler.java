@@ -1,4 +1,5 @@
-package com.jaguarliu.rpc.framework.core.proxy.jdk;
+package com.jaguarliu.rpc.framework.core.proxy.javassist;
+
 
 import com.jaguarliu.rpc.framework.core.common.RpcInvocation;
 
@@ -10,19 +11,24 @@ import java.util.concurrent.TimeoutException;
 import static com.jaguarliu.rpc.framework.core.common.cache.CommonClientCache.RESP_MAP;
 import static com.jaguarliu.rpc.framework.core.common.cache.CommonClientCache.SEND_QUEUE;
 
-public class JDKClientInvocationHandler implements InvocationHandler {
+
+/**
+ * @Author linhao
+ * @Date created in 7:15 下午 2021/12/5
+ */
+public class JavassistInvocationHandler implements InvocationHandler {
+
 
     private final static Object OBJECT = new Object();
 
     private Class<?> clazz;
 
-    public JDKClientInvocationHandler(Class<?> clazz) {
+    public JavassistInvocationHandler(Class<?> clazz) {
         this.clazz = clazz;
     }
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-
         RpcInvocation rpcInvocation = new RpcInvocation();
         rpcInvocation.setArgs(args);
         rpcInvocation.setTargetMethod(method.getName());
