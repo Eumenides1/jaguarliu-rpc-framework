@@ -2,24 +2,34 @@ package com.jaguarliu.rpc.framework.core.common.config;
 
 public class ClientConfig {
 
-    private Integer port;
+    private String applicationName;
 
-    private String serverAddr;
+    private String registerAddr;
 
-    public String getServerAddr() {
-        return serverAddr;
+    private String proxyType;
+
+    public String getProxyType() {
+        return proxyType;
     }
 
-    public void setServerAddr(String serverAddr) {
-        this.serverAddr = serverAddr;
+    public void setProxyType(String proxyType) {
+        this.proxyType = proxyType;
     }
 
-    public Integer getPort() {
-        return port;
+    public String getRegisterAddr() {
+        return registerAddr;
     }
 
-    public void setPort(Integer port) {
-        this.port = port;
+    public void setRegisterAddr(String registerAddr) {
+        this.registerAddr = registerAddr;
+    }
+
+    public String getApplicationName() {
+        return applicationName;
+    }
+
+    public void setApplicationName(String applicationName) {
+        this.applicationName = applicationName;
     }
 
 
